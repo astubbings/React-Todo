@@ -1,7 +1,10 @@
 import React from 'react';
+
+import './Todo.css';
+
 const Todo = props => {
     return (
-        <div className={`task${props.item.completed ? ' completed' : ''}`}>
+        <div className={`${props.item.completed ? 'completedStrikeCss' : ''}`} onClick>
             <p>{props.item.task}</p>
         </div>
     )

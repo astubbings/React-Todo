@@ -31,7 +31,9 @@ class TodoForm extends React.Component {
                 type="text"
                 name="item"
                 />
+                <button>Submit to Task List</button>
             </form>
+            
         )
 
     }

@@ -6,6 +6,7 @@ import React from 'react';
 
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
+import { isCompletionStatement } from '@babel/types';
 
 
 const taskArray = [
@@ -22,6 +23,11 @@ const taskArray = [
   {
     task: 'Embrace Imposter Syndrome',
     id: 1528817084358,
+    completed: true
+  },
+  {
+    task: 'Buy Coffee Cup',
+    id: 1528817094687,
     completed: false
   }
 ];
@@ -52,6 +58,11 @@ class App extends React.Component {
     });
   };
 
+  // handleCompletedChange = isComplete => {
+  //   taskArray.map
+  // }
+
+
 
   render() {
     console.log("rendering..."); // I like this console.log from example
@@ -61,6 +72,8 @@ class App extends React.Component {
         <h1>To Do List</h1>
         <TodoForm addTask={this.addTask} />
         <TodoList taskArray={this.state.taskArray} />
+        {/* handleCompleted={this.} */}
+
       </div>
     );
   }
