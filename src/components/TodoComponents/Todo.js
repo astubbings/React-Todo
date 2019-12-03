@@ -4,10 +4,15 @@ import './Todo.css';
 
 const Todo = props => {
     return (
-        <div className={`${props.item.completed ? 'completedStrikeCss' : ''}`} onClick>
+        <div 
+        className={`task ${props.item.completed ? ' completedStrikeCss' : ''}`} 
+        onClick={() => props.handleCompletedChange(props.item.id)}
+        >
             <p>{props.item.task}</p>
         </div>
     )
 }
 
 export default Todo;
+
+
