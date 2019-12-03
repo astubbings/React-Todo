@@ -29,7 +29,7 @@ class TodoForm extends React.Component {
                 value={this.state.newTask} 
                 onChange={this.handleChanges} 
                 type="text"
-                name="item2"
+                name="item"
                 />
                 <button>Submit to Task List</button>
             </form>

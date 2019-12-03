@@ -58,7 +58,10 @@ class App extends React.Component {
     this.setState(change);
   };
 
-  
+  clearCompletedTasks = () => {
+    const taskCompletedFilter = this.state.taskArray.filter(task => task.completed === true);
+    this.setState(taskCompletedFilter);
+  }
 
   addTask = newTaskText => {
     const newTask = {
@@ -80,10 +83,14 @@ class App extends React.Component {
       <div>
         <h2>Welcome to your Todo App!</h2>
         <h1>To Do List</h1>
-        <TodoForm addTask={this.addTask}  />
+        <TodoForm 
+        addTask={this.addTask}
+        clearCompletedTasks={this.clearCompletedTasks}
+        />
         <TodoList
           taskArray={this.state.taskArray}
           handleCompletedChange={this.handleCompletedChange}
+          
         />
       </div>
     );
