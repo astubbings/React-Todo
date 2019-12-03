@@ -90,7 +90,8 @@ class App extends React.Component {
         <TodoList
           taskArray={this.state.taskArray}
           handleCompletedChange={this.handleCompletedChange}
-          
+          clearCompletedTasks={this.clearCompletedTasks}
+
         />
       </div>
     );
