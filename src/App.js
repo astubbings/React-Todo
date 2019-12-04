@@ -51,16 +51,19 @@ class App extends React.Component {
     const change = this.state.taskArray.map(task => {
       if (id === task.id) {
         task.completed = !task.completed;
+        return task
+      }else{
+        return task;
       }
-      return task;
+      
 
     });
-    this.setState(change);
+    this.setState({change});
   };
 
   clearCompletedTasks = () => {
     const taskCompletedFilter = this.state.taskArray.filter(task => task.completed === true);
-    this.setState(taskCompletedFilter);
+    this.setState({taskCompletedFilter});
   }
 
   addTask = newTaskText => {
@@ -85,7 +88,7 @@ class App extends React.Component {
         <h1>To Do List</h1>
         <TodoForm 
         addTask={this.addTask}
-        clearCompletedTasks={this.clearCompletedTasks}
+        // clearCompletedTasks={this.clearCompletedTasks}
         />
         <TodoList
           taskArray={this.state.taskArray}
