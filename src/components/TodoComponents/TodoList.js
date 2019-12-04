@@ -13,7 +13,7 @@ const TodoList = props => {
                 handleCompletedChange={props.handleCompletedChange} 
                 />
             ))}
-            <button onClick={() => props.clearCompletedTasks}>
+            <button onClick={props.clearCompletedTasks}>
                     Clear Completed
             </button>
 

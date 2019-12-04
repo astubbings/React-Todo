@@ -62,8 +62,8 @@ class App extends React.Component {
   };
 
   clearCompletedTasks = () => {
-    const taskCompletedFilter = this.state.taskArray.filter(task => task.completed === true);
-    this.setState({taskCompletedFilter});
+    const taskCompletedFilter = this.state.taskArray.filter(task => task.completed === false);
+    this.setState({ taskArray: taskCompletedFilter });
   }
 
   addTask = newTaskText => {
